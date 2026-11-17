@@ -265,6 +265,9 @@ nainezz.build(yourIdea);</pre>
 const GITHUB = "nainezz";
 const WHATSAPP = "254743676970";
 const PROJECTS = [
+  { title:"Bank Reconciliation Tool", repo:"bank-reconciliation", live:"https://nainezz.github.io/bank-reconciliation/",
+    desc:"Python tool that matches a bank statement against a cash book, flags discrepancies (including likely transposition errors), detects duplicate debits and builds a full bank reconciliation statement as an HTML report.", stack:["Python","Accounting","Data quality","Unit tests"],
+    snippet:['adjusted_bank = bank_balance', '  + deposits_in_transit', '  - outstanding_payments', '<span class="k">assert</span> adjusted_bank == adjusted_book'] },
   { title:"Phone Price Checker", repo:"phone-price-checker", live:"https://nainezz.github.io/phone-price-checker/",
     desc:"Web app that compares ex-UK and ex-USA phone prices in Kenya by model, storage and grade, with a budget finder and a sortable price table.", stack:["JavaScript","HTML","CSS","GitHub Pages"],
     snippet:['<span class="k">const</span> uk  = priceFor(phone, <span class="s">"uk"</span>);', '<span class="k">const</span> usa = priceFor(phone, <span class="s">"usa"</span>);', 'best = Math.min(uk, usa);'] },
@@ -292,11 +295,11 @@ $('yr').textContent = new Date().getFullYear();
 $('projCount').textContent = PROJECTS.length;
 $('waBtn').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nainezz, I saw your portfolio and I'd like to talk about a project.")}`;
 
-const typeOf = p => p.stack.includes('Flutter') ? 'Mobile' : 'Web';
+const typeOf = p => p.stack.includes('Flutter') ? 'Mobile' : p.stack.includes('Python') ? 'Python' : 'Web';
 let active = 'All';
 
 function renderFilters(){
-  const opts = ['All', 'Mobile', 'Web'];
+  const opts = ['All', 'Mobile', 'Web', 'Python'];
   $('filters').innerHTML = opts.map(o => `<button class="chip ${o===active?'on':''}" data-o="${o}">${o === 'Mobile' ? 'Mobile (Flutter)' : o}</button>`).join('');
   $('filters').querySelectorAll('.chip').forEach(b => b.onclick = () => { active = b.dataset.o; renderFilters(); renderProjects(); });
 }
@@ -306,7 +309,7 @@ function renderProjects(){
     <article class="card">
       <div class="thumb"><div class="code"><div class="d"><i></i><i></i><i></i></div>${p.snippet.join('<br>')}</div></div>
       <div class="body">
-        ${PROJECTS.indexOf(p) < 2 ? '<span class="feat">Featured</span>' : ''}
+        ${PROJECTS.indexOf(p) < 3 ? '<span class="feat">Featured</span>' : ''}
         <h3>${p.title}</h3>
         <p>${p.desc}</p>
         <div class="stack">${p.stack.map(s => `<span>${s}</span>`).join('')}</div>
