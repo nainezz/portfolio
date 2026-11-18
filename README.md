@@ -1,17 +1,18 @@
 # Mohamed Yussuf (Nainezz): Portfolio
 
-Personal portfolio of **Mohamed Yussuf**, a software engineer, Flutter developer and accountant in Nairobi, Kenya.
+Personal portfolio of **Mohamed Yussuf**, a software engineer and Flutter developer in Nairobi, Kenya, open to remote roles.
 
 **Live:** https://nainezz.github.io/portfolio/
 
 ## Sections
 
-- **Hero:** name, roles, availability and portrait
-- **About:** background in software engineering and accounting
-- **Projects:** 8 projects with real screenshots, filterable by Mobile, Web and Python, each with a live demo and source code link
-- **Skills:** mobile, web, backend and tools, data and finance, AI
-- **Experience and education:** timeline
-- **Contact:** email, WhatsApp, GitHub, Instagram
+- **Hero:** name, roles, remote availability, portrait, and View projects and Download CV buttons
+- **About:** software engineering first, with accounting as a strength
+- **Featured projects:** Phone Price Checker, MyShop and Bank Reconciliation Tool, each with an expandable case study (problem, how it works, technical challenges, my role)
+- **More projects:** five more Flutter apps with live demos
+- **Skills:** mobile, programming, web, backend, development tools, data and finance, AI
+- **Professional experience** and **Education**
+- **Contact:** email, WhatsApp, GitHub, Instagram, CV
 
 ## Project structure
 
@@ -24,8 +25,12 @@ portfolio/
 │   └── main.js             # Mobile menu, project filters and cards
 ├── assets/
 │   ├── nainezz-portrait.jpg, portrait-*.webp
-│   └── projects/*.webp     # Screenshots of the live projects
-├── tools/screenshots.mjs   # Captures the project screenshots
+│   ├── projects/*.webp     # Screenshots of the live projects
+│   └── Mohamed-Yussuf-CV.pdf
+├── tools/
+│   ├── screenshots.mjs     # Captures the project screenshots
+│   ├── cv.html             # CV source: edit this
+│   └── build_cv.py         # Builds the CV PDF from cv.html
 ├── .github/workflows/screenshots.yml
 ├── robots.txt, sitemap.xml
 └── README.md
@@ -33,7 +38,8 @@ portfolio/
 
 ## Editing
 
-- **Add or change a project:** edit `js/projects.js`, then add its screenshot (see below).
+- **Add or change a project:** edit `js/projects.js` (`FEATURED` for case studies, `MORE_PROJECTS` for compact cards), then add its screenshot (see below).
+- **Update the CV:** edit `tools/cv.html`, then run `python3 tools/build_cv.py`.
 - **Change text:** edit `index.html`.
 - **Change colours or spacing:** edit the variables at the top of `css/style.css`.
 
