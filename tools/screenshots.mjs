@@ -14,7 +14,7 @@ const shots = [
   { name: 'myshop', url: 'https://nainezz.github.io/MyShop/', viewport: phone, wait: 12000 },
   { name: 'meals', url: 'https://nainezz.github.io/restaurentprojcet/', viewport: phone, wait: 12000 },
   { name: 'todolist', url: 'https://nainezz.github.io/todolist/', viewport: phone, wait: 12000 },
-  { name: 'abda', url: 'https://nainezz.github.io/login-form/', viewport: phone, wait: 12000 },
+  { name: 'abda', url: 'https://nainezz.github.io/login-form/', viewport: phone, wait: 25000 },
   { name: 'weather', url: 'https://nainezz.github.io/weatherApp/', viewport: phone, wait: 15000 },
   { name: 'provider-demo', url: 'https://nainezz.github.io/providerTest/', viewport: phone, wait: 12000 },
 ];
@@ -29,6 +29,9 @@ for (const s of shots) {
     geolocation: { latitude: -1.2921, longitude: 36.8219 },
     permissions: ['geolocation'],
     colorScheme: 'dark',
+    // A normal desktop Chrome identity; some public APIs block automated browsers.
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+    locale: 'en-KE',
   });
   const page = await context.newPage();
   try {
