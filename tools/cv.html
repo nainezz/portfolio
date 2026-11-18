@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mohamed Yussuf, Software Engineer: CV</title>
+<style>
+  @page { size: A4; margin: 11mm 15mm 9mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", sans-serif; color: #111418; font-size: 9.2pt; line-height: 1.36; }
+  a { color: #1f5bd4; text-decoration: none; }
+  h1 { margin: 0; font-size: 22pt; letter-spacing: -0.02em; line-height: 1.1; font-weight: 700; }
+  .title { margin-top: 3pt; font-size: 11.5pt; font-weight: 500; color: #2a2f36; }
+  .contact { margin-top: 5pt; color: #3b424c; font-size: 8.7pt; display: flex; flex-wrap: wrap; column-gap: 0; }
+  .contact-2 { margin-top: 1pt; }
+  .contact span + span::before { content: "|"; color: #b8bec7; margin: 0 5pt; }
+  h2 { margin: 9pt 0 4pt; padding-bottom: 3pt; border-bottom: 1px solid #d5d9df; font-size: 10.5pt; font-weight: 700; color: #1f5bd4; letter-spacing: 0; }
+  p { margin: 0; }
+  .summary { color: #2a2f36; }
+  .skills { display: grid; grid-template-columns: 34mm 1fr; row-gap: 2pt; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: #2a2f36; }
+  .item { margin-top: 5pt; break-inside: avoid; }
+  .item:first-of-type { margin-top: 0; }
+  .row { display: flex; justify-content: space-between; gap: 12pt; align-items: baseline; }
+  .role { font-weight: 700; font-size: 10pt; }
+  .org { color: #2a2f36; font-weight: 500; }
+  .date { color: #59616c; white-space: nowrap; font-size: 9pt; }
+  ul { margin: 3pt 0 0; padding-left: 13pt; }
+  li { margin: 1pt 0; color: #2a2f36; }
+  .links { font-size: 8.8pt; color: #59616c; margin-top: 1pt; }
+  .tech { color: #59616c; font-size: 8.8pt; }
+  .other { color: #2a2f36; }
+</style>
+</head>
+<body>
+  <h1>Mohamed Yussuf</h1>
+  <p class="title">Software Engineer | Flutter Developer</p>
+  <p class="contact">
+    <span>Nairobi, Kenya</span>
+    <span><a href="mailto:nainezca4@gmail.com">nainezca4@gmail.com</a></span>
+    <span>+254 743 676 970</span>
+  </p>
+  <p class="contact contact-2">
+    <span><a href="https://www.linkedin.com/in/mohamed-yussuf-7726791a9/">linkedin.com/in/mohamed-yussuf-7726791a9</a></span>
+    <span><a href="https://github.com/nainezz">github.com/nainezz</a></span>
+    <span><a href="https://nainezz.github.io/portfolio/">nainezz.github.io/portfolio</a></span>
+  </p>
+
+  <h2>Summary</h2>
+  <p class="summary">Software engineer with a BSc in Software Engineering from Zhejiang Normal University, China, and professional experience developing software and mobile applications with Flutter, Python and JavaScript. I build and deploy working applications with Firebase, REST APIs, automated tests and continuous integration, and publish each project with a live demo. A background in accounting adds strong attention to data quality and accuracy. Open to remote roles.</p>
+
+  <h2>Technical skills</h2>
+  <dl class="skills">
+    <dt>Mobile</dt><dd>Flutter, Dart, Provider</dd>
+    <dt>Programming</dt><dd>Python, JavaScript</dd>
+    <dt>Web</dt><dd>HTML, CSS, responsive design</dd>
+    <dt>Backend</dt><dd>Firebase (Auth, Realtime Database), REST APIs</dd>
+    <dt>Tools</dt><dd>Git, GitHub, GitHub Actions</dd>
+    <dt>Data and finance</dt><dd>Microsoft Excel, Google Sheets, data analysis, financial reporting</dd>
+    <dt>AI</dt><dd>AI training concepts, data annotation, data quality</dd>
+    <dt>Languages</dt><dd>Somali, English and Kiswahili (fluent); Arabic (intermediate)</dd>
+  </dl>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="row"><p><span class="role">Accountant</span>, <span class="org">Ayatiin Limited, Nairobi</span></p><p class="date">Jan 2023 to present</p></div>
+    <ul>
+      <li>Review financial records and analyse discrepancies.</li>
+      <li>Prepare reports and maintain accurate documentation.</li>
+      <li>Work daily with spreadsheets and accounting systems.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><p><span class="role">Software Engineer</span>, <span class="org">Sibrar, Nairobi</span></p><p class="date">2022 to 2023</p></div>
+    <ul>
+      <li>Developed and supported software and mobile applications using Flutter, Python and JavaScript.</li>
+      <li>Tested applications and solved technical problems.</li>
+    </ul>
+  </div>
+
+  <h2>Selected projects</h2>
+  <div class="item">
+    <div class="row"><p><span class="role">MyShop: phone shop app</span> <span class="tech">Flutter, Dart 3, Provider, Firebase, GitHub Actions</span></p></div>
+    <ul>
+      <li>Shop with Firebase login, search and filters, cart, checkout with WhatsApp ordering, order status and a seller dashboard.</li>
+      <li>Rebuilt a 2022 app on Dart 3 null safety while keeping existing data working; added database security rules, unit tests and CI that publishes a live web demo.</li>
+    </ul>
+    <p class="links"><a href="https://nainezz.github.io/MyShop/">Live demo</a> | <a href="https://github.com/nainezz/MyShop">github.com/nainezz/MyShop</a></p>
+  </div>
+  <div class="item">
+    <div class="row"><p><span class="role">Bank Reconciliation Tool</span> <span class="tech">Python, unit tests</span></p></div>
+    <ul>
+      <li>Matches a bank statement against a cash book in three passes and builds a full reconciliation statement as an HTML report.</li>
+      <li>Exact money handling with Decimal, transposition-error detection and 13 unit tests.</li>
+    </ul>
+    <p class="links"><a href="https://nainezz.github.io/bank-reconciliation/">Live demo</a> | <a href="https://github.com/nainezz/bank-reconciliation">github.com/nainezz/bank-reconciliation</a></p>
+  </div>
+  <div class="item">
+    <div class="row"><p><span class="role">Phone Price Checker</span> <span class="tech">JavaScript, HTML, CSS</span></p></div>
+    <ul>
+      <li>Compares ex-UK and ex-USA phone prices by model, storage and grade, with a budget finder and sortable price table.</li>
+    </ul>
+    <p class="links"><a href="https://nainezz.github.io/phone-price-checker/">Live demo</a> | <a href="https://github.com/nainezz/phone-price-checker">github.com/nainezz/phone-price-checker</a></p>
+  </div>
+  <div class="item">
+    <p class="other"><span class="role">More Flutter projects:</span> Meals &amp; Recipes, Abda Shopping App (REST API), To-Do List (token auth), CimiloSheeg Weather (geolocation), Provider State Demo. All live at <a href="https://nainezz.github.io/portfolio/">nainezz.github.io/portfolio</a>.</p>
+  </div>
+
+  <h2>Education</h2>
+  <div class="item">
+    <div class="row"><p><span class="role">BSc Software Engineering</span>, <span class="org">Zhejiang Normal University, China</span></p><p class="date">2017 to 2021</p></div>
+  </div>
+
+</body>
+</html>
