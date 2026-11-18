@@ -11,8 +11,24 @@ Portfolio and about-me site for **Nainezz**, a software engineer in Nairobi, Ken
 - **Projects:** 7 projects, filterable by Mobile and Web, each linking to its code on GitHub
 - **Contact:** WhatsApp, GitHub and Instagram
 
+## Project structure
+
+```
+portfolio/
+├── index.html          # Page layout and content (About, Experience, Skills, Contact)
+├── css/
+│   └── style.css       # All styles: dark theme, layout, mobile breakpoints
+├── js/
+│   ├── projects.js     # Project list: edit this to add or change projects
+│   └── main.js         # Renders the project filters and cards
+└── assets/
+    └── nainezz-portrait.jpg
+```
+
 ## Editing
 
-Everything lives in `index.html`. To add or change a project, edit the `PROJECTS` list near the bottom of the file. Add `live: "https://..."` to a project to show a Live demo link.
+- **Add or change a project:** edit `js/projects.js`. Add `live: "https://..."` to show a Live demo link.
+- **Change text** (About, Experience, Skills, Contact): edit `index.html`.
+- **Change colours or layout:** edit `css/style.css`. The main colours are CSS variables at the top of the file.
 
-Built with plain HTML, CSS and JavaScript and hosted on GitHub Pages.
+Built with plain HTML, CSS and JavaScript, with no frameworks or build step, and hosted on GitHub Pages.
