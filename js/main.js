@@ -1,35 +1,94 @@
-/* Nainezz portfolio: renders the project filters and cards from js/projects.js */
+/* Mohamed Yussuf portfolio: mobile menu, project filters and cards. */
 
-const $ = id => document.getElementById(id);
-$('yr').textContent = new Date().getFullYear();
-$('projCount').textContent = PROJECTS.length;
-$('waBtn').href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hi Nainezz, I saw your portfolio and I'd like to talk about a project.")}`;
+(function () {
+  "use strict";
 
-const typeOf = p => p.stack.includes('Flutter') ? 'Mobile' : p.stack.includes('Python') ? 'Python' : 'Web';
-let active = 'All';
+  // ---------- Mobile menu ----------
+  const toggle = document.querySelector(".menu-toggle");
+  const links = document.getElementById("nav-links");
 
-function renderFilters(){
-  const opts = ['All', 'Mobile', 'Web', 'Python'];
-  $('filters').innerHTML = opts.map(o => `<button class="chip ${o===active?'on':''}" data-o="${o}">${o === 'Mobile' ? 'Mobile (Flutter)' : o}</button>`).join('');
-  $('filters').querySelectorAll('.chip').forEach(b => b.onclick = () => { active = b.dataset.o; renderFilters(); renderProjects(); });
-}
+  function setMenu(open) {
+    toggle.setAttribute("aria-expanded", String(open));
+    links.classList.toggle("is-open", open);
+  }
 
-function renderProjects(){
-  $('projectGrid').innerHTML = PROJECTS.filter(p => active === 'All' || typeOf(p) === active).map((p, i) => `
-    <article class="card">
-      <div class="thumb"><div class="code"><div class="d"><i></i><i></i><i></i></div>${p.snippet.join('<br>')}</div></div>
-      <div class="body">
-        ${PROJECTS.indexOf(p) < 3 ? '<span class="feat">Featured</span>' : ''}
-        <h3>${p.title}</h3>
-        <p>${p.desc}</p>
-        <div class="stack">${p.stack.map(s => `<span>${s}</span>`).join('')}</div>
-        <div class="plinks">
-          ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener">Live demo ↗</a>` : ''}
-          <a href="https://github.com/${GITHUB}/${p.repo}" target="_blank" rel="noopener">View code ↗</a>
-        </div>
-      </div>
-    </article>`).join('');
-}
+  toggle.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
+  links.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-renderFilters();
-renderProjects();
+  // ---------- Projects ----------
+  const grid = document.getElementById("project-grid");
+  const filterBar = document.getElementById("filters");
+  const categories = ["All", ...new Set(PROJECTS.map((p) => p.category))];
+  let active = "All";
+
+  function el(tag, attrs = {}, children = []) {
+    const node = document.createElement(tag);
+    for (const [key, value] of Object.entries(attrs)) {
+      if (key === "text") node.textContent = value;
+      else node.setAttribute(key, value);
+    }
+    for (const child of children) node.append(child);
+    return node;
+  }
+
+  function projectCard(p) {
+    const repoUrl = `https://github.com/${GITHUB_USER}/${p.repo}`;
+    const isPhone = p.screen === "phone";
+
+    const img = el("img", {
+      src: p.image,
+      alt: `Screenshot of ${p.title}`,
+      loading: "lazy",
+      decoding: "async",
+      width: isPhone ? "600" : "1600",
+      height: isPhone ? "1298" : "1000",
+    });
+    const media = el("div", { class: `project-media ${isPhone ? "is-phone" : "is-desktop"}` }, [
+      isPhone ? el("div", { class: "phone", style: `--shift: ${p.shift || 0}` }, [img]) : img,
+    ]);
+
+    const linkRow = el("div", { class: "project-links" });
+    if (p.live) {
+      linkRow.append(el("a", { href: p.live, target: "_blank", rel: "noopener", text: "Live demo" }));
+    }
+    linkRow.append(el("a", { href: repoUrl, target: "_blank", rel: "noopener", class: "secondary", text: "Source code" }));
+
+    return el("article", { class: "project" }, [
+      media,
+      el("div", { class: "project-body" }, [
+        el("h3", { class: "project-title", text: p.title }),
+        el("p", { class: "project-desc", text: p.desc }),
+        el("ul", { class: "project-stack", "aria-label": "Built with" }, p.stack.map((s) => el("li", { text: s }))),
+        linkRow,
+      ]),
+    ]);
+  }
+
+  function renderFilters() {
+    filterBar.replaceChildren(
+      ...categories.map((c) => {
+        const count = c === "All" ? PROJECTS.length : PROJECTS.filter((p) => p.category === c).length;
+        const button = el("button", { type: "button", "aria-pressed": String(c === active), text: c });
+        button.setAttribute("aria-label", `${c} (${count} ${count === 1 ? "project" : "projects"})`);
+        button.addEventListener("click", () => {
+          active = c;
+          renderFilters();
+          renderProjects();
+        });
+        return button;
+      })
+    );
+  }
+
+  function renderProjects() {
+    const list = PROJECTS.filter((p) => active === "All" || p.category === active);
+    grid.replaceChildren(...list.map(projectCard));
+  }
+
+  renderFilters();
+  renderProjects();
+
+  // ---------- Footer year ----------
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();

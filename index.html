@@ -1,313 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yussuf Mohamed — Software Engineer &amp; Accountant · Nairobi</title>
-    <meta
-      name="description"
-      content="Yussuf Mohamed (Nainezz) is a Nairobi-based software engineer and accountant with experience in Flutter, Python, JavaScript, financial analysis and data quality."
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d10'/%3E%3Cg transform='translate(12 12) scale(.4)'%3E%3Cpolygon points='12,88 12,12 32,12 32,88' fill='%23eef1f5'/%3E%3Cpolygon points='32,12 52,12 88,88 68,88' fill='%235ee7ff'/%3E%3Cpolygon points='68,12 88,12 88,60 68,30' fill='%23eef1f5'/%3E%3C/g%3E%3C/svg%3E"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="wrap">
-        <a href="#top" class="logo" aria-label="nainezz home"
-          ><svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
-            <polygon points="12,88 12,12 32,12 32,88" fill="#eef1f5" />
-            <polygon points="32,12 52,12 88,88 68,88" fill="#5ee7ff" />
-            <polygon points="68,12 88,12 88,60 68,30" fill="#eef1f5" /></svg
-          >nainezz</a
-        >
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact" class="cta">Hire me</a>
-        </div>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mohamed Yussuf: Software Engineer, Flutter Developer and Accountant in Nairobi</title>
+  <meta name="description" content="Mohamed Yussuf (Nainezz) is a software engineer, Flutter developer and accountant in Nairobi, Kenya, building mobile and web apps with Flutter, Python and JavaScript.">
+  <link rel="canonical" href="https://nainezz.github.io/portfolio/">
+  <meta name="theme-color" content="#000000">
 
-    <header class="hero" id="top">
-      <div class="wrap">
+  <!-- Link previews (WhatsApp, LinkedIn, X) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mohamed Yussuf: Software Engineer, Flutter Developer and Accountant">
+  <meta property="og:description" content="Flutter, Python and JavaScript projects from a Nairobi-based software engineer with a background in accounting.">
+  <meta property="og:url" content="https://nainezz.github.io/portfolio/">
+  <meta property="og:image" content="https://nainezz.github.io/portfolio/assets/nainezz-portrait.jpg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cg transform='translate(12 12) scale(.4)'%3E%3Cpolygon points='12,88 12,12 32,12 32,88' fill='%23f4f6f9'/%3E%3Cpolygon points='32,12 52,12 88,88 68,88' fill='%234d8dff'/%3E%3Cpolygon points='68,12 88,12 88,60 68,30' fill='%23f4f6f9'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/portrait-640.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohamed Yussuf",
+    "alternateName": "Nainezz",
+    "jobTitle": "Software Engineer",
+    "url": "https://nainezz.github.io/portfolio/",
+    "image": "https://nainezz.github.io/portfolio/assets/nainezz-portrait.jpg",
+    "email": "mailto:nainezca4@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Zhejiang Normal University" },
+    "worksFor": { "@type": "Organization", "name": "Ayatiin Limited" },
+    "knowsAbout": ["Flutter", "Dart", "Python", "JavaScript", "Firebase", "Accounting", "Financial reporting", "Data quality"],
+    "sameAs": ["https://github.com/nainezz", "https://instagram.com/nainezz17"]
+  }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Main">
+    <a href="#top" class="brand" aria-label="Nainezz, back to top">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="12,88 12,12 32,12 32,88"/><polygon class="brand-accent" points="32,12 52,12 88,88 68,88"/><polygon points="68,12 88,12 88,60 68,30"/></svg>
+      <span>Nainezz</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Menu</span>
+      <span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero wrap" id="top">
+    <div class="hero-text">
+      <p class="status"><span class="status-dot" aria-hidden="true"></span>Available for new roles and freelance projects</p>
+      <h1 class="hero-name">Mohamed Yussuf</h1>
+      <p class="hero-roles"><span>Software Engineer</span><span class="sep" aria-hidden="true">|</span><span>Flutter Developer</span><span class="sep" aria-hidden="true">|</span><span>Accountant</span></p>
+      <p class="hero-intro">I build mobile and web apps with Flutter, Python and JavaScript, and I bring an accountant's eye for accuracy, data and the way businesses really run.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View my projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <picture>
+        <source type="image/webp" srcset="assets/portrait-400.webp 400w, assets/portrait-640.webp 640w" sizes="(max-width: 860px) 70vw, 400px">
+        <img src="assets/nainezz-portrait.jpg" width="640" height="800" alt="Portrait of Mohamed Yussuf" fetchpriority="high">
+      </picture>
+      <figcaption>Nairobi, Kenya</figcaption>
+    </figure>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="about-title">About</h2>
+        <p class="lead">A software engineer who also knows how the numbers work.</p>
+      </div>
+      <div class="split-body prose">
+        <p>I'm Mohamed Yussuf, a software engineer based in Nairobi, Kenya, with a Bachelor of Science in Software Engineering from Zhejiang Normal University, China. My development experience includes Flutter mobile applications, Python, JavaScript, Firebase and REST API integrations.</p>
+        <p>I also work as an Accountant at Ayatiin Limited, reviewing financial information, preparing reports, maintaining accurate records and analysing discrepancies. This combination of software engineering and accounting gives me a practical perspective on technology, data and business processes, and a habit of checking that things add up.</p>
+        <dl class="facts">
+          <div><dt>Education</dt><dd>BSc Software Engineering, Zhejiang Normal University</dd></div>
+          <div><dt>Now</dt><dd>Accountant at Ayatiin Limited</dd></div>
+          <div><dt>Builds with</dt><dd>Flutter, Python, JavaScript</dd></div>
+          <div><dt>Languages</dt><dd>Somali, English and Kiswahili (fluent); Arabic (intermediate)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-projects" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <div class="section-head">
         <div>
-          <div class="pill">
-            <span class="dot"></span> Software engineer &amp; accountant ·
-            Nairobi, Kenya
-          </div>
-          <h1>
-            Hi, I'm Yussuf Mohamed.<br />I build <em>apps</em> and<br />make
-            <em>numbers</em> add up.
-          </h1>
-          <p>
-            Software engineer and analytical professional based in Nairobi,
-            Kenya. I build mobile and web applications with Flutter, Python and
-            JavaScript, and bring strong experience in accounting, financial
-            information and data quality.
-          </p>
-          <div class="btns">
-            <a href="#projects" class="btn primary">See my projects →</a>
-            <a href="mailto:nainezca4@gmail.com" class="btn">Email me</a>
-          </div>
+          <h2 id="projects-title">Projects</h2>
+          <p class="lead">Every project runs live in your browser. Screenshots are taken from the live apps.</p>
         </div>
-        <div class="terminal" aria-hidden="true">
-          <div class="bar"><i></i><i></i><i></i></div>
-          <pre><span class="k">final</span> nainezz = Developer(
-  location: <span class="s">"Nairobi, KE"</span>,
-  roles: [<span class="s">"Engineer"</span>, <span class="s">"Accountant"</span>],
-  focus: [<span class="s">"Flutter"</span>, <span class="s">"Web"</span>, <span class="s">"Finance"</span>],
-  stack: [<span class="s">"Dart"</span>, <span class="s">"Python"</span>, <span class="s">"JS"</span>],
-  available: <span class="k">true</span>,
-);
+        <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+      </div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      <noscript><p>See all projects on <a href="https://github.com/nainezz">GitHub</a>.</p></noscript>
+    </div>
+  </section>
 
-<span class="c">// let's build something</span>
-nainezz.build(yourIdea);</pre>
+  <!-- Skills -->
+  <section class="section" id="skills" aria-labelledby="skills-title">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="skills-title">Skills</h2>
+        <p class="lead">From mobile and web development to finance and data work.</p>
+      </div>
+      <div class="split-body skills">
+        <div class="skill-group">
+          <h3>Mobile development</h3>
+          <ul><li>Flutter</li><li>Dart</li><li>Provider</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Web development</h3>
+          <ul><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend and tools</h3>
+          <ul><li>Firebase</li><li>REST APIs</li><li>Python</li><li>Git and GitHub</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Data and finance</h3>
+          <ul><li>Microsoft Excel</li><li>Google Sheets</li><li>Financial reporting</li><li>Data analysis</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>AI</h3>
+          <ul><li>AI training concepts</li><li>Data annotation</li><li>Data quality</li></ul>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="wrap about">
-        <div
-          class="avatar"
-          style="overflow: hidden; padding: 0; background: #151920"
-        >
-          <img
-            src="assets/nainezz-portrait.jpg"
-            alt="Yussuf Mohamed profile portrait"
-            style="
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 28px;
-            "
-          /><small
-            style="
-              background: rgba(11, 13, 16, 0.72);
-              color: #eef1f5;
-              padding: 5px 10px;
-              border-radius: 999px;
-            "
-            >Yussuf Mohamed · Nairobi</small
-          >
-        </div>
-        <div>
-          <div class="kicker">// about me</div>
-          <h2>Engineer from Nairobi, building for real people.</h2>
-          <p>
-            I'm Yussuf Mohamed, a software engineer based in Nairobi, Kenya, with a
-            Bachelor of Science in Software Engineering from Zhejiang Normal
-            University, China. My development experience includes Flutter mobile
-            applications, Python, JavaScript, Firebase and REST API
-            integrations.
-          </p>
-          <p>
-            I also work as an Accountant at Ayatiin Limited, reviewing financial
-            information, preparing reports, maintaining accurate records and
-            analysing discrepancies. This combination of software engineering
-            and accounting gives me a practical perspective on technology, data
-            and business processes.
-          </p>
-          <p>
-            <b style="color: var(--ink); font-weight: 600">Languages:</b>
-            Somali, English and Kiswahili (fluent); Arabic (intermediate).
-          </p>
-          <div class="facts">
-            <div class="fact"><b>Nairobi</b><span>Based in Kenya</span></div>
-            <div class="fact">
-              <b>Flutter</b><span>Mobile development</span>
-            </div>
-            <div class="fact">
-              <b id="projCount">7</b><span>Featured projects</span>
-            </div>
-          </div>
-          <div class="btns">
-            <a
-              class="btn"
-              href="https://github.com/nainezz"
-              target="_blank"
-              rel="noopener"
-              >GitHub profile ↗</a
-            >
-          </div>
-        </div>
+  <!-- Experience -->
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="wrap split">
+      <div class="split-head">
+        <h2 id="experience-title">Experience and education</h2>
+        <p class="lead">Software development, accounting and a degree in software engineering.</p>
       </div>
-    </section>
+      <ol class="timeline split-body">
+        <li class="timeline-item">
+          <p class="timeline-date"><time datetime="2023-01">January 2023</time> to present</p>
+          <h3>Accountant</h3>
+          <p class="timeline-org">Ayatiin Limited, Nairobi</p>
+          <p>Reviewing financial records, analysing discrepancies, preparing reports, maintaining accurate documentation and working with spreadsheets and accounting systems.</p>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-date"><time datetime="2022">2022</time> to <time datetime="2023">2023</time></p>
+          <h3>Software Engineer</h3>
+          <p class="timeline-org">Sibrar, Nairobi</p>
+          <p>Developed and supported software and mobile applications using Flutter, Python and JavaScript; tested applications and solved technical problems.</p>
+        </li>
+        <li class="timeline-item">
+          <p class="timeline-date"><time datetime="2017">2017</time> to <time datetime="2021">2021</time></p>
+          <h3>BSc Software Engineering</h3>
+          <p class="timeline-org">Zhejiang Normal University, China</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-    <section
-      id="experience"
-      style="border-top: 1px solid var(--line); background: var(--bg2)"
-    >
-      <div class="wrap">
-        <div class="head">
-          <div>
-            <div class="kicker">// experience & education</div>
-            <h2>Technology meets analytical thinking.</h2>
-          </div>
-          <p>
-            Professional experience across software development, accounting and
-            higher education.
-          </p>
-        </div>
-        <div class="skill-groups two-col">
-          <article class="group">
-            <div class="kicker">JAN 2023 — PRESENT</div>
-            <h3>Accountant · Ayatiin Limited</h3>
-            <p style="color: var(--muted); font-size: 0.92rem">
-              Nairobi, Kenya. Reviewing financial records, analysing
-              discrepancies, preparing reports, maintaining accurate
-              documentation and working with spreadsheets and accounting
-              systems.
-            </p>
-          </article>
-          <article class="group">
-            <div class="kicker">2022 — 2023</div>
-            <h3>Software Engineer · Sibrar</h3>
-            <p style="color: var(--muted); font-size: 0.92rem">
-              Nairobi, Kenya. Developed and supported software and mobile
-              applications using Flutter, Python and JavaScript; tested
-              applications and solved technical problems.
-            </p>
-          </article>
-          <article class="group">
-            <div class="kicker">2017 — 2021</div>
-            <h3>BSc Software Engineering</h3>
-            <p style="color: var(--muted); font-size: 0.92rem">
-              Zhejiang Normal University · China.
-            </p>
-          </article>
-        </div>
+  <!-- Contact -->
+  <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title" class="contact-title">Have a project or a role in mind?</h2>
+      <p class="lead contact-lead">I'm available for mobile apps, websites, and tools that make financial data easier to manage. Email or WhatsApp me and I'll get back to you.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:nainezca4@gmail.com?subject=Hello%20Mohamed">Email me</a>
+        <a class="btn btn-ghost" id="whatsapp-btn" href="https://wa.me/254743676970" target="_blank" rel="noopener">Message on WhatsApp</a>
       </div>
-    </section>
+      <ul class="contact-list">
+        <li><span class="contact-label">Email</span><a href="mailto:nainezca4@gmail.com">nainezca4@gmail.com</a></li>
+        <li><span class="contact-label">WhatsApp</span><a href="https://wa.me/254743676970" target="_blank" rel="noopener">0743 676 970</a></li>
+        <li><span class="contact-label">GitHub</span><a href="https://github.com/nainezz" target="_blank" rel="noopener">github.com/nainezz</a></li>
+        <li><span class="contact-label">Instagram</span><a href="https://instagram.com/nainezz17" target="_blank" rel="noopener">@nainezz17</a></li>
+        <li><span class="contact-label">Location</span><span>Nairobi, Kenya</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
 
-    <section id="skills">
-      <div class="wrap">
-        <div class="head">
-          <div>
-            <div class="kicker">// skills</div>
-            <h2>What I work with</h2>
-          </div>
-          <p>From mobile and web development to finance and data work.</p>
-        </div>
-        <div class="skill-groups two-col">
-          <div class="group">
-            <h3>Mobile</h3>
-            <div class="tags">
-              <span>Flutter</span><span>Dart</span><span>Provider</span
-              ><span>Android &amp; iOS</span><span>Cross-platform</span>
-            </div>
-          </div>
-          <div class="group">
-            <h3>Web</h3>
-            <div class="tags">
-              <span>JavaScript</span><span>HTML &amp; CSS</span
-              ><span>Responsive design</span><span>GitHub Pages</span>
-            </div>
-          </div>
-          <div class="group">
-            <h3>Backend &amp; tools</h3>
-            <div class="tags">
-              <span>Python</span><span>Firebase</span><span>REST APIs</span
-              ><span>Auth &amp; tokens</span><span>Git &amp; GitHub</span
-              ><span>UI design</span>
-            </div>
-          </div>
-          <div class="group">
-            <h3>Finance &amp; data</h3>
-            <div class="tags">
-              <span>Financial reporting</span><span>Reconciliation</span
-              ><span>Discrepancy analysis</span><span>Data quality</span
-              ><span>Spreadsheets &amp; Excel</span
-              ><span>Accounting systems</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Mohamed Yussuf</p>
+    <p>Built by Nainezz</p>
+  </div>
+</footer>
 
-    <section id="projects">
-      <div class="wrap">
-        <div class="head">
-          <div>
-            <div class="kicker">// projects</div>
-            <h2>Things I've built</h2>
-          </div>
-          <p>
-            Mobile, web and Python projects. Try every one live in your browser,
-            or read the code on GitHub.
-          </p>
-        </div>
-        <div class="filters" id="filters"></div>
-        <div class="grid" id="projectGrid"></div>
-      </div>
-    </section>
-
-    <section id="contact" style="padding-top: 0">
-      <div class="wrap">
-        <div class="contact">
-          <h2>Need an app or a finance tool?</h2>
-          <p>
-            I'm available for mobile apps, websites, and tools that make
-            financial data easier to manage. Message me and let's talk.
-          </p>
-          <div class="btns">
-            <a
-              class="btn primary"
-              id="waBtn"
-              href="#"
-              target="_blank"
-              rel="noopener"
-              >Chat on WhatsApp</a
-            >
-            <a
-              class="btn"
-              href="https://github.com/nainezz"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-            <a
-              class="btn"
-              href="https://instagram.com/nainezz17"
-              target="_blank"
-              rel="noopener"
-              >Instagram</a
-            >
-          </div>
-          <div class="details">
-            <span
-              >✉️
-              <b
-                ><a href="mailto:nainezca4@gmail.com">nainezca4@gmail.com</a></b
-              ></span
-            >
-            <span>📞 <b>0743 676 970</b></span>
-            <span>💻 <b>github.com/nainezz</b></span>
-            <span>📍 <b>Nairobi, Kenya</b></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="wrap">
-        <span>© <span id="yr"></span> Yussuf Mohamed. All rights reserved.</span>
-        <span class="mono">built by nainezz</span>
-      </div>
-    </footer>
-
-    <script src="js/projects.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
