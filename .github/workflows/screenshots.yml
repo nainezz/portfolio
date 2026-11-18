@@ -1,9 +1,13 @@
 name: Project screenshots
 
-# Takes fresh screenshots of every live project and commits them to the branch
-# it was run on. Start it from the Actions tab ("Run workflow").
+# Takes fresh screenshots of every live project and commits them to the branch.
+# Runs when the screenshot script changes, or from the Actions tab ("Run workflow").
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - tools/screenshots.mjs
+      - .github/workflows/screenshots.yml
 
 permissions:
   contents: write
