@@ -2,6 +2,7 @@
 // Run by .github/workflows/screenshots.yml; output goes to assets/projects/.
 import { chromium } from 'playwright';
 import { mkdir } from 'node:fs/promises';
+import sharp from 'sharp';
 
 const OUT = 'assets/projects';
 const desktop = { width: 1280, height: 800 };
@@ -37,7 +38,10 @@ for (const s of shots) {
   try {
     await page.goto(s.url, { waitUntil: 'networkidle', timeout: 60000 });
     await page.waitForTimeout(s.wait);
-    await page.screenshot({ path: `${OUT}/${s.name}.png` });
+    // Saved as WebP, sized for the portfolio cards (2x for sharp screens).
+    const png = await page.screenshot();
+    const width = s.viewport === phone ? 600 : 1600;
+    await sharp(png).resize({ width }).webp({ quality: 80 }).toFile(`${OUT}/${s.name}.webp`);
     console.log(`ok   ${s.name}`);
   } catch (e) {
     console.log(`FAIL ${s.name}: ${e.message}`);

@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install --no-save playwright@1
+      - run: npm install --no-save playwright@1 sharp@0
       - run: npx playwright install --with-deps chromium
       - run: node tools/screenshots.mjs
       - name: Commit screenshots
