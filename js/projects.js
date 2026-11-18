@@ -124,9 +124,8 @@ const MORE_PROJECTS = [
     image: "assets/projects/weather.webp",
     screen: "phone",
     shift: 22,
-    desc: "Gets the device's GPS location and fetches live weather from the OpenWeatherMap API.",
-    stack: ["Flutter", "Geolocator", "OpenWeather API"],
-    note: "In progress",
+    desc: "Shows the current weather for your location or any city: temperature, conditions, feels-like, humidity and wind, from the OpenWeatherMap API.",
+    stack: ["Flutter", "Geolocator", "OpenWeather API", "Tests"],
   },
   {
     title: "Provider State Demo",
